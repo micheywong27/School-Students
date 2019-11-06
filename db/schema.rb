@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 2019_04_30_152005) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.integer "age"
+    t.integer "school_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["school_id"], name: "index_students_on_school_id"
   end
 
 end

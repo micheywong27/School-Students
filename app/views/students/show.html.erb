@@ -1,0 +1,7 @@
+<h1><%= @student.name %> Show Page!</h1>
+<hr>
+<p>Name of student: <%= @student.name %></p>
+<p>Age of student: <%= @student.age %></p>
+<p>Student belongs to: <%= @student.school.name %></p>
+<p><%= link_to "Update students info", edit_student_path(@student) %></p>
+<p><%= link_to "Delete student", delete_student_path(@student), method: :delete %></p>
